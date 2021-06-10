@@ -22,13 +22,7 @@ jobs:
       - run:
           name: Test
           command: mvn test
-       
-      - run:
-          name: Save test results
-          command: 
-            bundle exec cucumber --format pretty --format json --out ~/project/tests.cucumber
-          when: always
-          
+         
       - store_test_results:
           path: ~/project/
       - store_artifacts:
