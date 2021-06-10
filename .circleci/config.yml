@@ -27,7 +27,7 @@ jobs:
           path: ~/project/
                
       - store_test_results:
-          path: /root/project/test-output/HtmlReport/HtmlReport.html
+          path: ~/project/target/cucumber.json
 
 workflows:
   # Below is the definition of your workflow.
