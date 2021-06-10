@@ -8,7 +8,7 @@ Feature: User registration
     Given i open signup page
     When i am on "https://miro.com/signup/"
     Then i signup with following details
-      | Test47 | Test47@gmail.com | Sc@nari01 |
+      | Test48 | Test48@gmail.com | Sc@nari01 |
     Then i check the Terms and Agreement
     Then i click the Get started now button on the page
     And i should see the confirmation page
