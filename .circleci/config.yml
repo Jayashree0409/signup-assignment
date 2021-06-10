@@ -25,15 +25,14 @@ jobs:
        
       - run:
           name: Save test results
-          command: |
-            mkdir -p ~/cucumber
-            bundle exec cucumber --format pretty --format json --out ~/cucumber/tests.cucumber
+          command: 
+            bundle exec cucumber --format pretty --format json --out ~/project/tests.cucumber
           when: always
           
       - store_test_results:
-          path: ~/cucumber
+          path: ~/project/
       - store_artifacts:
-          path: ~/cucumber
+          path: ~/project/
 
 workflows:
   # Below is the definition of your workflow.
