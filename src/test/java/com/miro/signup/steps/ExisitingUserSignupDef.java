@@ -52,6 +52,6 @@ public void i_login_with_following_details(DataTable data) throws Exception {
 public void i_should_see_the_dashboard_page() throws Exception {
 	signupObject.dashboardConfirmationPage();
 
-	Thread.sleep(7000);
+	Thread.sleep(9000);
 	}
 }
