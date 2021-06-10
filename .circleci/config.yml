@@ -24,10 +24,11 @@ jobs:
           command: mvn test
        
       - store_test_results:
-          path: target/cucumber.json
+         # path: target/cucumber.json
+          path: test_results
 
       - store_artifacts:
-          path: target/cucumber.json
+          path: test_results
 
 workflows:
   # Below is the definition of your workflow.
