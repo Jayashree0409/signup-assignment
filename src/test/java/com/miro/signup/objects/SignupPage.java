@@ -192,9 +192,10 @@ public class SignupPage {
 	 * Confirmation check whether the dashboard page displayed
 	 */
 
-	public void dashboardConfirmationPage() {
+	public void dashboardConfirmationPage() throws Exception{
 
 		signup.click();
+		Thread.sleep(7000);
 		Assert.assertEquals(Hooks.getDriver().getCurrentUrl(), DASHBOARD_URL);
 	}
 
