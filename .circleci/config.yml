@@ -23,12 +23,17 @@ jobs:
           name: Test
           command: mvn test
        
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p ~/cucumber
+            bundle exec cucumber --format junit --out ~/cucumber/junit.xml
+          when: always
+          
       - store_test_results:
-         # path: target/cucumber.json
-          path: src/test/test_results
-
+          path: ~/cucumber
       - store_artifacts:
-          path: src/test/test_results
+          path: ~/cucumber
 
 workflows:
   # Below is the definition of your workflow.
